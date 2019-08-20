@@ -1,0 +1,31 @@
+  <h3 style="text-align: center">CARTPAGE</h3>
+<div style="float:right">
+<a href="/user/signout" class="btn btn-danger">
+Logout
+</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id Product</th>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Time</th>
+      <th scope="col">Price</th>
+      <th scope="col">Option</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{# each data}}
+    <tr>
+      <th scope="row">{{this.id_product}}</th>
+      <td><img src="{{this.imagePath}}" width="70px"> </td>
+      <td>{{this.title}}</td>
+      <td>{{this.time}}</td>
+      <td>{{this.price}}</td>
+      <td><a type="button" class="btn btn-warning" href="/user/cartpage/R_{{this._id}}" >REMOVE</a></td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
